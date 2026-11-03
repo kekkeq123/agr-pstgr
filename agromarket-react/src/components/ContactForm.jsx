@@ -1,10 +1,6 @@
-import { useState } from 'react';
-
 const API_URL = 'http://localhost:3000/api';
 
 function ContactForm() {
-  const [sending, setSending] = useState(false);
-
   async function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -12,7 +8,6 @@ function ContactForm() {
     // Собираем все поля формы в объект { name: ..., email: ..., ... }
     const data = Object.fromEntries(new FormData(form));
 
-    setSending(true);
     try {
       const res = await fetch(`${API_URL}/orders`, {
         method: 'POST',
@@ -30,8 +25,6 @@ function ContactForm() {
       form.reset();
     } catch (err) { // сервер выключен или недоступен
       alert('Сервер недоступен. Запущен ли agromarket-server?');
-    } finally {
-      setSending(false);
     }
   }
 
@@ -52,7 +45,6 @@ function ContactForm() {
                placeholder="+7 7XX XXX XX XX" />
 
         <label htmlFor="quantity">Объём заказа (кг)</label>
-        {/* name="quantity" — именно это имя ждёт сервер (раньше было amount) */}
         <input id="quantity" name="quantity" type="number" min="10" required />
 
         <label htmlFor="date">Желаемая дата доставки</label>
@@ -61,9 +53,7 @@ function ContactForm() {
         <label htmlFor="comment">Комментарий</label>
         <textarea id="comment" name="comment" rows="4" />
 
-        <button type="submit" disabled={sending}>
-          {sending ? 'Отправка…' : 'Отправить заявку'}
-        </button>
+        <button type="submit">Отправить заявку</button>
       </form>
     </section>
   );

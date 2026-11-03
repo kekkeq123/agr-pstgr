@@ -1,8 +1,20 @@
 {
   "products": [
-    { "id": 1, "name": "Картофель, 1 кг", "price": 350, "image": "https://placehold.co/300x200" },
-    { "id": 2, "name": "Мёд натуральный, 1 л", "price": 4500, "image": "https://placehold.co/300x200" },
-    { "id": 3, "name": "Молоко фермерское, 1 л", "price": 600, "image": "https://placehold.co/300x200" },
-    { "id": 4, "name": "Яблоки сезонные, 1 кг", "price": 750, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5qaYinaaZ4YhryGSlpHuHdK-6SeDYJa74NUjPebPxFw&s=10/300x200" }
+    {
+      "id": 1,
+      "name": "Картофель",
+      "category": "Овощи",
+      "price": 180,
+      "unit": "кг",
+      "image": "https://images.unsplash.com/photo-1518977676601-b5ff82aba03d?auto=format&fit=crop&q=80&w=500"
+    },
+    {
+      "id": 2,
+      "name": "Морковь",
+      "category": "Овощи",
+      "price": 220,
+      "unit": "кг",
+      "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=500"
+    }
   ]
 }

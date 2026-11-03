@@ -1,0 +1,11 @@
+# Use this workspace to collaborate
+workspace:
+  id: 45560a24-0bf3-4816-83a8-91da11d68b55
+
+localResources:
+  collections:
+    - ../agromarket-server/postman/agromarket.postman_collection.json
+
+cloudResources:
+  collections:
+    ../postman/collections/AgroMarket API: f0263612-1487-4466-be84-00e88701d91f

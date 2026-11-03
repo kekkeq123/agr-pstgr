@@ -1,15 +1,16 @@
 {
   "name": "agromarket-server",
   "version": "1.0.0",
-  "description": "Express API для АгроМаркета",
   "type": "module",
   "scripts": {
     "dev": "node --watch server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "db:init": "node db/seed.js"
   },
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "pg": "^8.13.3"
   }
 }
